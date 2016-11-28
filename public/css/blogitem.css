@@ -1,5 +1,5 @@
 html{  }
-body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+body{ margin: 0; font: 400 100%/1.4; color: #555; }
 *{ box-sizing: border-box; }
 *::after,*::before{ box-sizing: border-box; }
 h1{ font-size: 2rem;}
@@ -9,26 +9,15 @@ h4{ font-size: 0,1rem;}
 p { font-size: 0.9rem; }
 ul{ padding:0; list-style-position: inside; }
 li{ font-size: 0.9rem; margin: 0; }
-
-/*.col-4{
-  background-color: green;
+.container{
+  width: 80%;
 }
-.col-6{
-  background-color: red;
-}
-.col-12{
-  background-color: grey;
-}
-.grid-column{
-  background-color: pink;
-  /*align-items: baseline;*/
-}*/
 .project-img{
   display: flex;
   align-items: flex-end;
 }
 
-img{
+.project-img img{
   width:20em;
   margin-left:1em;
   height:20em;
