@@ -1,7 +1,4 @@
-<div class="grid">
-    <div class="col-2">
-      <!--  <a href="" ng-click="$ctrl.prev()">Prev</a>-->
-    </div>
+
     <div class="col-8 grid-spaceAround">
         <div class="col-4_sm-12 grid-spaceBetween" ng-repeat="post in $ctrl.posts | limitTo : $ctrl.blogliststate track by $index">
             <div class="thecard">
@@ -22,11 +19,14 @@
             </div>
         </div>
     </div>
-    <div class="col-2 ">
-      <!--  <a href="" ng-click="$ctrl.next()" class="next">Next</a>-->
-    </div>
-</div><!--end of containing div-->
-
 <div class="grid center load">
-      <a  ng-click="$ctrl.loadMore()" ng-if="$ctrl.blogliststate < $ctrl.posts.length">Load More</a>
+<button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.blogliststate < $ctrl.posts.length">Load More</button>
 </div>
+
+
+
+
+
+
+  <!--  <a href="" ng-click="$ctrl.prev()">Prev</a>-->
+   <!--<a href="" ng-click="$ctrl.next()" class="next">Next</a>-->

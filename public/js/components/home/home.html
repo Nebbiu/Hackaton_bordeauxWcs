@@ -1,10 +1,23 @@
-<div class="container">
-    <div class="row">
-        <div class="jumbotron">
-            <h1 class="text-xs-center">Blog</h1>
-            <ui-view />
-            <profile></profile>
+<div class="grid">
+    <div class="col-2 selectpanel">
+        <div class="selectpanel">
+            <button class="pure-button pure-button-primary selectpanel">JavaScript</button>
+            <button class="pure-button button-success selectpanel">Java</button>
+            <button class="pure-button button-warning selectpanel">PHP</button>
+            <button class="pure-button button-error selectpanel">Ruby</button>
         </div>
     </div>
+
+    <div class="col-8 grid-spaceAround">
+        <ui-view />
+    </div>
+
+    <div class="col-2 userpanel">
+
+    </div>
 </div>
-  <profile></profile>
+<!--end of containing div-->
+
+<div class="grid center load">
+    <button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.blogliststate < $ctrl.posts.length">Load More</button>
+</div>
