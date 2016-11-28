@@ -10,7 +10,7 @@ let blogSchema = new mongoose.Schema({
     img1: String,
     img2: String,
     title: String,
-    author: String,
+    author: { type:String, default: 'Project made by :'},
     PublishedAt: { type: Date, default: Date.now },
     content: String,
     website: String,
