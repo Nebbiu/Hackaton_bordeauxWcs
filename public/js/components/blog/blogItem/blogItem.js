@@ -28,7 +28,6 @@
                 })
             }
 
-
             this.editMode = (blog, index) => {
                 this.blog.editMode = true;
 

@@ -12,24 +12,30 @@
                             console.log('this has been added');
                     };
 
-                    this.carouselstate = 0
+                    this.blogliststate = 0
                     this.next = () => {
-                        this.carouselstate ==
+                        this.blogliststate ==
                             this.posts.length - 1 ?
-                            this.carouselstate = 0 :
-                            this.carouselstate++
+                            this.blogliststate = 0 :
+                            this.blogliststate++
                             console.log('search next blog');
                     }
 
                     this.prev = () => {
-                        this.carouselstate < 1 ?
-                            this.carouselstate =
+                        this.blogliststate < 1 ?
+                            this.blogliststate =
                             this.posts.length - 1 :
-                            this.carouselstate--;
+                            this.blogliststate--;
                         console.log('search prev blog');
                     }
 
+                    let date = new Date();
+                    this.hhmm = (new Date(), 'hh:mm');
 
+                    this.blogliststate = 9
+                    this.loadMore = () => {
+                    this.blogliststate += 3
+                }
 
 
 
