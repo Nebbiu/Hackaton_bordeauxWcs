@@ -37,3 +37,8 @@ BUTTON STYLES
 .button-secondary {
     background: rgb(66, 184, 221);
 }
+
+.bloghome{
+	display:flex;
+	flex-shrink:1;
+}
