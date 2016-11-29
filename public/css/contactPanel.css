@@ -1,5 +1,12 @@
 /*-----------------------
 FIXED DIV POSITIONS
+------------------------- */
+.fixedcontact{
+z-index: 1000;
+position: fixed;
+position: center;
+max-width: 100%;
+}
 
 
 /*-----------------------
@@ -15,10 +22,6 @@ position: fixed;
 z-index: auto;
 
 }
-.homepanel{
-
-}
-
 /*-----------------------
 AVATAR CONTAINER
 ------------------------- */
