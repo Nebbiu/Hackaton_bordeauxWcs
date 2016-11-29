@@ -1,7 +1,7 @@
 ((app) => {
     app.component('selectPanel', {
         templateUrl: 'js/components/home/selectPanel.html',
-        controller: function($stateParams, postsService, $state) {
+        controller: function($stateParams, projectsService, $state) {
 
 
 
