@@ -1,6 +1,11 @@
-/*-----------------------
-FIXED DIV POSITIONS
-------------------------- */
+body{
+	background: #2e2e30;
+}
+*{
+	box-sizing: border-box;
+}
+@import url(https://fonts.googleapis.com/css?family=Quicksand:700);
+
 
 
 
@@ -31,30 +36,4 @@ BUTTON STYLES
 
 .button-secondary {
     background: rgb(66, 184, 221);
-}
-
-
-/*-----------------------
-SELECT PANEL FLEXBOX
-------------------------- */
-
-.selectpanel{
-display: flex;
-flex-flow: column nowrap;
-justify-content: space-between;
-align-items: stretch;
-align-content: center;
-}
-
-
-/*-----------------------
-SELECT MENU PANEL
-------------------------- */
-
-/* Customization to limit height of the menu */
-.custom-restricted {
-    height: 160px;
-    width: 100%;
-    border: 1px solid gray;
-    border-radius: 4px;
 }
