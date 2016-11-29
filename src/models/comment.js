@@ -6,21 +6,14 @@
 let mongoose = require('mongoose');
 
 //creating the blogschema with mongoose's constructor class method.
-let blogSchema = new mongoose.Schema({
-    img1: String,
-    img2: String,
+let commentSchema = new mongoose.Schema({
     title: String,
     author: { type:String, default: 'Project made by :'},
     PublishedAt: { type: Date, default: Date.now },
     content: String,
-    website: String,
-    votes: Number,
-    techno: String,
-    comment: {type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}
-
-  },{
+    {
   timestamps: true
 });
 
 // creating and exporting model with the model method of mongoose.
-module.exports = mongoose.model('Blog', blogSchema);
+module.exports = mongoose.model('Comment', blogSchema);
