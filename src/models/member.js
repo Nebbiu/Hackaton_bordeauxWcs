@@ -10,13 +10,10 @@ let mongoose = require('mongoose');
 let memberSchema = new mongoose.Schema({
     name: String,
     content: String,
-    projects: Number,
-    content: String,
     email: String,
     tweeter: String,
     facebook: String,
     github: String,
-    school: String,
     image: String
 });
 

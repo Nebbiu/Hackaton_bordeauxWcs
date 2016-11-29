@@ -19,7 +19,9 @@ module.exports = (router) => {
 
     //get post by id
     router.get('/posts/:id', function(req, res) {
-        Post.findById(req.params.id, function(err, post) {
+        Post.findById(req.params.id)
+            .populate('comments')
+            .exec(function(err, post) {
             if (err) {
                 return res.status(500).json({
                     message: err.message

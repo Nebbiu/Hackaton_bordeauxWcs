@@ -5,6 +5,7 @@
             get(){
                 return $http.get('/api/posts');
             },
+            
             getById(id){
                 return $http.get('/api/posts/' + id);
             },

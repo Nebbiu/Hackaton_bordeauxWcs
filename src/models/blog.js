@@ -10,16 +10,25 @@ let blogSchema = new mongoose.Schema({
     img1: String,
     img2: String,
     title: String,
-    author: { type:String, default: 'Project made by :'},
-    PublishedAt: { type: Date, default: Date.now },
+    author: {
+        type: String,
+        default: 'Project made by :'
+    },
+    PublishedAt: {
+        type: Date,
+        default: Date.now
+    },
     content: String,
     website: String,
     votes: Number,
     techno: String,
-    comment: {type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}
+    comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment'
+    }]
 
-  },{
-  timestamps: true
+}, {
+    timestamps: true
 });
 
 // creating and exporting model with the model method of mongoose.
