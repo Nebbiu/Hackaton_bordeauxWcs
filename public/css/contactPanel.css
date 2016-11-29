@@ -1,0 +1,51 @@
+/*-----------------------
+FIXED DIV POSITIONS
+------------------------- */
+.fixed{
+z-index: 1000;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+width: 80%; /* Full width */
+position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0
+}
+
+/*-----------------------
+  CONTACTFLEXBOX
+------------------------- */
+
+.contactpanel{
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-end;;
+align-content: space-around;
+}
+
+/*-----------------------
+AVATAR CONTAINER
+------------------------- */
+.avatar-container{
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  /*background-image: url("https://s-media-cache-ak0.pinimg.com/236x/3c/41/74/3c41748bb2526f33c5ff6aa3adcd0b20.jpg");	*/
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 3px rgba(0, 150, 136, 0.3);
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,45 +1,23 @@
-<div class="grid fixed">
-    <div class="col-2_sm-12 selectpanel">
-        <div class="selectpanel">
-            <button class="pure-button pure-button-primary selectpanel">JavaScript</button>
-            <button class="pure-button button-success selectpanel">Java</button>
-            <button class="pure-button button-warning selectpanel">PHP</button>
-            <button class="pure-button button-error selectpanel">Ruby</button>
-        </div>
-  <div class="col-2_sm-12 selectpanel">
-        <form class="pure-form pure-g">
-            <div class="pure-u-1">
-                <input type="text" class="pure-input-1" placeholder="Search by Developer">
-            </div>
-            <button type="submit" class="pure-button selectpanel">Search</button>
-        </form>
-    </div>
+<div class="grid">
 
-        <div class="col-2_sm-12selectpanel">
-            <div class="pure-menu pure-menu-scrollable custom-restricted">
-                <a href="#" class="pure-menu-link pure-menu-heading">Home</a>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Most Recent</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Most Votes</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Most Views</a></li>
-                </ul>
-            </div>
-        </div>
 
-    </div>
 
+
+
+    <select-Panel class="col-2_sm-12-spaceBetween selectpanel"> </select-Panel>
 
 
     <div class="col-8 grid-spaceAround">
         <ui-view />
     </div>
 
-    <div class="col-2 userpanel">
 
+
+    <contact-Panel class="col-2_sm-12-spaceBetween contactpanel"> <contact-Panel>
+
+
+    </div><!--end of containing div-->
+
+    <div class="grid center load">
+        <button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.blogliststate < $ctrl.posts.length">Load More</button>
     </div>
-</div>
-<!--end of containing div-->
-
-<div class="grid center load">
-    <button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.blogliststate < $ctrl.posts.length">Load More</button>
-</div>
