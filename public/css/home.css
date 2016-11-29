@@ -1,3 +1,8 @@
+/*-----------------------
+FIXED DIV POSITIONS
+------------------------- */
+
+
 
 /*-----------------------
 BUTTON STYLES
@@ -39,6 +44,17 @@ flex-flow: column nowrap;
 justify-content: space-between;
 align-items: stretch;
 align-content: center;
+}
 
 
+/*-----------------------
+SELECT MENU PANEL
+------------------------- */
+
+/* Customization to limit height of the menu */
+.custom-restricted {
+    height: 160px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 4px;
 }
