@@ -3,27 +3,20 @@ FIXED DIV POSITIONS
 ------------------------- */
 .fixed{
 z-index: 1000;
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-width: 100%; /* Full width */
+
 position: fixed;
-  top: 0;
+  top: 2rem;
   bottom: 0;
   left: 0
 }
 
 /*-----------------------
-  SELECTFLEXBOX
+  SELECTPANEL
 ------------------------- */
 
 .selectpanel{
 display: flex;
-justify-content: middle;
-flex-flow: column;
-align-items: stretch;
-align-content: space-around;
+flex-direction: column;
 }
 
 /*-----------------------
@@ -31,16 +24,18 @@ SEARCH INPUT
 ------------------------- */
 .searchinput{
 display: flex;
-justify-content: flex-end;
+flex-direction: column;
+
 }
 
+/*-----------------------
+SEARCH INPUT
+------------------------- */
+.selectmenu{
+display: flex;
 
 
-
-
-
-
-
+}
 
 
 /*-----------------------
