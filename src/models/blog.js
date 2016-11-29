@@ -6,7 +6,9 @@
 let mongoose = require('mongoose');
 
 //creating the blogschema with mongoose's constructor class method.
-let commentSchema = new mongoose.Schema({
+let blogSchema = new mongoose.Schema({
+    img1: String,
+    img2: String,
     title: String,
     author: {
         type: String,
@@ -16,10 +18,18 @@ let commentSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    content: String
+    content: String,
+    website: String,
+    votes: Number,
+    techno: String,
+    comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment'
+    }]
+
 }, {
     timestamps: true
 });
 
 // creating and exporting model with the model method of mongoose.
-module.exports = mongoose.model('Comment', commentSchema);
+module.exports = mongoose.model('Blog', blogSchema);
