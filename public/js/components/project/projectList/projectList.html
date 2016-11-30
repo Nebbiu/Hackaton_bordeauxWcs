@@ -1,33 +1,29 @@
-
-    <div class="col-8 grid-spaceAround">
-        <div class="col-4_sm-12 grid-spaceBetween" ng-repeat="project in $ctrl.projects | limitTo : $ctrl.projectliststate track by $index">
-            <div class="thecard">
-                <a class="card-img" href="#_">
-                    <img ng-src="//images.unsplash.com/photo-1477232566771-946d93463500?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=">
-                </a>
-                <div class="card-caption">
-                    <a href="#_">
-                        <span class="date">{{project.PublishedAt | date}}</span>
-                        <h3>{{project.title}}</h3>
-                        <h5>{{project.author}}<h5>
+<div class="col-8 grid-spaceAround">
+    <div class="col-4_sm-12 grid-spaceBetween" ng-repeat="project in $ctrl.projects | limitTo : $ctrl.projectliststate track by $index">
+        <div class="thecard"  ng-click="$ctrl.selectProject(project)">
+            <span class="card-img">
+                <img ng-src="//images.unsplash.com/photo-1477232566771-946d93463500?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=">
+            </span>
+            <div class="card-caption">
+                <span>
+                    <span class="date">{{project.PublishedAt | date}}</span>
+                <h3>{{project.title}}</h3>
+                <h5>{{project.author}}<h5>
                         <p>{{project.content | limitTo : 50}}</p>
-                    </a>
-                </div>
-                <a ui-sref="project.item({id: project._id})" class="card-outmore">
-                    <h5>Look at this project</h5>
-                    <i class="outmore-icon fa fa-angle-right"></i>
+                    </span>
+            </div>
+            <a ui-sref="project.item({id: project._id})" class="card-outmore">
+                <h5>Look at this project</h5>
+                <i class="outmore-icon fa fa-angle-right"></i>
                 </a>
             </div>
         </div>
     </div>
-<div class="grid center load">
-<button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.projectliststate < $ctrl.projects.length">Load More</button>
-</div>
+    <div class="grid center load">
+        <button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.projectliststate < $ctrl.projects.length">Load More</button>
+    </div>
 
 
 
-
-
-
-  <!--  <a href="" ng-click="$ctrl.prev()">Prev</a>-->
-   <!--<a href="" ng-click="$ctrl.next()" class="next">Next</a>-->
+    <!--  <a href="" ng-click="$ctrl.prev()">Prev</a>-->
+    <!--<a href="" ng-click="$ctrl.next()" class="next">Next</a>-->

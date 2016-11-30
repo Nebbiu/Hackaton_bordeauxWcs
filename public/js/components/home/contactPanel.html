@@ -3,20 +3,20 @@
 
     <div class="avatar-container">
         <div class="avatar selectpanel">
-            <img src="https://s-media-cache-ak0.pinimg.com/236x/3c/41/74/3c41748bb2526f33c5ff6aa3adcd0b20.jpg">
+            <img ng-src="{{$ctrl.members[0].image}}">
         </div>
     </div>
 
   <div class="">
-      <h3 >The Big Lebowski</h3>
-      <p >Dude, they fuckin pissed on my rug man.</p>
+      <h3>{{$ctrl.members[0].name}}</h3>
+      <p >{{$ctrl.members[0].content}}</p>
   </div>
 
     <div class="contactpanel">
-        <button ng-click="git()" class="pure-button pure-button-primary selectpanel">Email</button>
-        <button class="pure-button button-success selectpanel"><a ng-href="https://twitter.com/?lang=en"Github>Github</button>
-        <button class="pure-button button-warning selectpanel">Twitter</button>
-        <button class="pure-button button-error selectpanel">Linkden</button>
+        <button ng-click="git()" class="pure-button pure-button-primary selectpanel">{{$ctrl.members[0].email}}</button>
+        <button class="pure-button button-success selectpanel"><a ng-href="https://twitter.com/?lang=en">{{$ctrl.members[0].tweeter}}</a></button>
+        <button class="pure-button button-warning selectpanel">{{$ctrl.members[0].name}}</button>
+        <button class="pure-button button-error selectpanel">{{$ctrl.members[0].github}}</button>
 
     </div>
 </div>

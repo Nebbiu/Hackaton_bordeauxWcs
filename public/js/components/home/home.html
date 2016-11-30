@@ -1,29 +1,22 @@
 <div class="grid">
 
-
-
-
-
-
     <select-Panel class="col-2_sm-12-spaceBetween fixed">
 
     </select-Panel>
 
 
     <div class="col-8 grid-spaceAround" data-push-left="off-2">
-
         <ui-view />
     </div>
 
+    <contact-Panel class="col-2_sm-12-spaceBetween contactpanel fixedcontact" data-push-left="off-10">
+        <contact-Panel>
 
 
 
-    <contact-Panel class="col-2_sm-12-spaceBetween contactpanel fixedcontact" data-push-left="off-10"> <contact-Panel>
+</div>
+<!--end of containing div-->
 
-
-
-    </div><!--end of containing div-->
-
-    <div class="grid center load">
-        <button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.projectsliststate < $ctrl.projects.length">Load More</button>
-    </div>
+<div class="grid center load">
+    <button class="pure-button hvr-curl-bottom-right pure-button-primary" ng-click="$ctrl.loadMore()" ng-if="$ctrl.projectsliststate < $ctrl.projects.length">Load More</button>
+</div>

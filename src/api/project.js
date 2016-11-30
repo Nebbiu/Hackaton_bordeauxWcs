@@ -7,7 +7,7 @@ let Project = require('../models/project');
 module.exports = (router) => {
     //mounting router method to get crud restFull api
     router.get('/projects', function(req, res) {
-        Project.find({}).exec(function(err, projects) {
+        Project.find({}).populate('members').populate('comments').exec(function(err, projects) {
             if (err) {
                 return res.status(500).json({
                     message: err.message

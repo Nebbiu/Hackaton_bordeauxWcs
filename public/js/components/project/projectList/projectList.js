@@ -1,7 +1,11 @@
 ((app) => {
     app.component('projectList', {
             templateUrl: 'js/components/project/projectList/projectList.html',
-            controller: function(projectsService) {
+            controller: function(projectsService, $rootScope) {
+
+                    this.selectedProject = (project) =>{
+                      $rootScope.selectedProject = project
+                    }
 
                     projectsService.get().then((response) => {
                         this.projects = response.data
