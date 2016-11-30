@@ -12,7 +12,7 @@
                         <p>{{project.content | limitTo : 50}}</p>
                     </span>
             </div>
-            <a ui-sref="project.item({id: project._id})" class="card-outmore">
+            <a ng-click="$ctrl.display(project)" class="card-outmore">
                 <h5>Look at this project</h5>
                 <i class="outmore-icon fa fa-angle-right"></i>
                 </a>

@@ -7,8 +7,6 @@
                 this.members = $rootScope.selectedProject.members
             }, true)
 
-
-
             let date = new Date();
             this.hhmm = (new Date(), 'hh:mm');
 
