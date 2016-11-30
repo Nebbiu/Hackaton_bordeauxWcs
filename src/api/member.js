@@ -6,6 +6,18 @@ let Project = require('../models/project');
 
 module.exports = (router) => {
 
+  router.get('/members', function(req, res) {
+      Member.find({}).exec(function(err, members) {
+          if (err) {
+              return res.status(500).json({
+                  message: err.message
+              });
+          }
+          res.json(members);
+      });
+    });
+
+
     router.post('/members', function(req, res) {
       //on créer notre commentaire
       Member.create(req.body, function(err, member) {
