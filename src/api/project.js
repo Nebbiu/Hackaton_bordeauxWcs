@@ -7,7 +7,7 @@ let Project = require('../models/project');
 module.exports = (router) => {
     //mounting router method to get crud restFull api
     router.get('/projects', function(req, res) {
-        Project.find({}, function(err, projects) {
+        Project.find({}).exec(function(err, projects) {
             if (err) {
                 return res.status(500).json({
                     message: err.message
@@ -15,11 +15,11 @@ module.exports = (router) => {
             }
             res.json(projects);
         });
-    });
+      });
 
     //get project by id
     router.get('/projects/:id', function(req, res) {
-        Project.findById(req.params.id, function(err, project) {
+        Project.findById(req.params.id).populate('members').populate('comments').exec(function(err, project) {
             if (err) {
                 return res.status(500).json({
                     message: err.message

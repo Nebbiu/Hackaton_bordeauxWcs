@@ -6,7 +6,7 @@
 
 let mongoose = require('mongoose');
 
-//creating the blogschema with mongoose's constructor class method.
+//creating the projectSchema with mongoose's constructor class method.
 let memberSchema = new mongoose.Schema({
     name: String,
     content: String,

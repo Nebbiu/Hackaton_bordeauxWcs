@@ -16,7 +16,8 @@ let projectSchema = new mongoose.Schema({
     website: String,
     votes: Number,
     techno: String,
-    comments: []
+    comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}],
+    members: [{type: mongoose.Schema.Types.ObjectId, ref: 'Member'}]
   },{
   timestamps: true
 });

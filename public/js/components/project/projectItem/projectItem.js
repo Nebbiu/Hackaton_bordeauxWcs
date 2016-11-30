@@ -3,7 +3,7 @@
         templateUrl: 'js/components/project/projectItem/projectItem.html',
         controller: function($stateParams, projectsService, $state) {
 
-            projectService.getById($stateParams.id).then((response) => {
+            projectsService.getById($stateParams.id).then((response) => {
                 this.project = response.data;
             });
 
