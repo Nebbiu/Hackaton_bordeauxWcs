@@ -1,2 +1,2 @@
 # Hackaton_bordeauxWcs
-Sharing web project in an angular application, hackaton project.
+This project was an hackaton project. Two developper work on this. Karl Mouat and myself.
